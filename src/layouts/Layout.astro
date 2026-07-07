@@ -6,59 +6,90 @@ export interface Props {
 const { lang = 'en' } = Astro.props;
 
 const isID = lang === 'id';
-const url = Astro.url;
+const site = Astro.site ?? new URL('https://fulfex.com');
 
-const enUrl = new URL(url);
-enUrl.pathname = '/';
-const idUrl = new URL(url);
-idUrl.pathname = '/id/';
+const enUrl = new URL('/', site);
+const idUrl = new URL('/id/', site);
 
-const title = 'Fulfex — Storefront template for WordPress';
+const title = isID
+	? 'Fulfex — Open Software untuk Commerce Merdeka'
+	: 'Fulfex — Open Software for Independent Commerce';
 const desc = isID
-	? 'Storefront template open-source yang langsung jalan dengan WordPress API. Konfigurasi warna, font, dan branding ala shadcn.'
-	: 'An open-source storefront template that connects to your WordPress API out of the box. Configure colors, fonts, and branding shadcn-style.';
+	? 'FOSS yang membantu developer dan penjual di seluruh dunia memiliki software commerce mereka sendiri. Tumbuh tanpa lock-in SaaS, tanpa biaya beruntun.'
+	: 'Free and open source software that helps developers and sellers worldwide own their commerce software. Grow your business without SaaS lock-in or recurring fees.';
 const ogLocale = isID ? 'id_ID' : 'en_US';
 const primaryUrl = isID ? idUrl : enUrl;
 const alternateUrl = isID ? enUrl : idUrl;
+const ogImage = new URL('/og-image.svg', site);
 ---
 
 <!doctype html>
 <html lang={lang}>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<meta name="description" content={desc} />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content="index, follow, max-image-preview:large" />
+		<meta name="author" content="Fulfex" />
+		<meta name="theme-color" content="#000000" />
+		<meta name="application-name" content="Fulfex" />
+		<meta name="keywords" content={isID
+			? 'Fulfex, FOSS, open source, commerce, storefront, WordPress, WooCommerce, theme, shadcn, free software, no SaaS'
+			: 'Fulfex, FOSS, open source, commerce, storefront, WordPress, WooCommerce, theme, shadcn, free software, no SaaS'} />
+
 		<link rel="canonical" href={primaryUrl.toString()} />
 		<link rel="alternate" hreflang={isID ? 'id' : 'en'} href={primaryUrl.toString()} />
 		<link rel="alternate" hreflang={isID ? 'en' : 'id'} href={alternateUrl.toString()} />
 		<link rel="alternate" hreflang="x-default" href={enUrl.toString()} />
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		<link rel="manifest" href="/site.webmanifest" />
+
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={primaryUrl.toString()} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={desc} />
 		<meta property="og:site_name" content="Fulfex" />
 		<meta property="og:locale" content={ogLocale} />
-		<meta property="og:image" content={`${url.origin}/favicon.svg`} />
+		<meta property="og:image" content={ogImage.toString()} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={desc} />
+		<meta name="twitter:image" content={ogImage.toString()} />
+
 		<meta name="generator" content={Astro.generator} />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
 		<title>{title}</title>
-		<script type="application/ld+json" set:html={JSON.stringify({
+
+		<script is:inline type="application/ld+json" set:html={JSON.stringify({
 			'@context': 'https://schema.org',
 			'@type': 'SoftwareApplication',
 			name: 'Fulfex',
 			applicationCategory: 'BusinessApplication',
 			operatingSystem: 'Web',
-			description: 'A modern commerce runtime for WordPress and WooCommerce.',
+			description: 'Free and open source software that helps developers and sellers worldwide own their commerce software. Grow without SaaS lock-in.',
 			url: primaryUrl.toString(),
-			offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+			image: ogImage.toString(),
+			offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+			author: { '@type': 'Organization', name: 'Fulfex', url: site.toString() },
+		})} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'WebSite',
+			name: 'Fulfex',
+			url: site.toString(),
+			description: desc,
+			inLanguage: lang,
 		})} />
 	</head>
 	<body>
@@ -67,12 +98,24 @@ const alternateUrl = isID ? enUrl : idUrl;
 </html>
 
 <style>
+	:root {
+		--bg: #000000;
+		--fg: #ffffff;
+		--fg-secondary: #a1a1a1;
+		--fg-tertiary: #666666;
+		--border: rgba(255, 255, 255, 0.1);
+		--border-hover: rgba(255, 255, 255, 0.2);
+		--surface: rgba(255, 255, 255, 0.03);
+		--surface-hover: rgba(255, 255, 255, 0.06);
+		--accent: #ffffff;
+	}
 	html, body {
-		margin: 0; width: 100%; height: 100%;
-		font-family: 'Inter', system-ui, -apple-system, sans-serif;
-		background: #ffffff; color: #18181b;
+		margin: 0; width: 100%; min-height: 100%;
+		font-family: 'Geist', system-ui, -apple-system, sans-serif;
+		background: var(--bg); color: var(--fg);
 		-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+		font-feature-settings: 'cv11', 'ss01';
 	}
 	* { box-sizing: border-box; }
-	::selection { background: rgba(99, 102, 241, 0.35); }
+	::selection { background: rgba(255, 255, 255, 0.15); color: var(--fg); }
 </style>
