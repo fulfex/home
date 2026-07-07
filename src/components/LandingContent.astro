@@ -11,41 +11,44 @@ const langFlag = isID
 	: '<svg width="14" height="10" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect y="6" width="16" height="6" fill="#ce1126"/></svg>';
 
 const ic = {
-	ful: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
-	store: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5M4 9v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9M9 21v-6h6v6"/></svg>',
-	users: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
-	clock: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
-	lock: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>',
-	dollar: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
-	globe: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
-	heart: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
-	refresh: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>',
-	code: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
-	layout: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>',
-	box: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>',
-	bag: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>',
-	grid: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
-	search: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
-	check: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
-	shield: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
-	server: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>',
-	unlock: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>',
-	key: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L15 8"/></svg>',
-	terminal: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>',
-	palette: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>',
-	sliders: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>',
-	rocket: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.16 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.16-1.62 0-5 0-5"/></svg>',
-	zap: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+	unlock: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>',
+	puzzle: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19.439 7.85c-.049.322.059.658.284.88L22 10.5l-2.5 2.5-1.5-1.5c-.423-.179-.886-.167-1.5 0a2.5 2.5 0 1 1-3-3c.167-.614.179-1.077 0-1.5L13 5.5 10.5 3 9 4.5c-.222.225-.558.333-.88.284a2.5 2.5 0 1 0-3 3c.049.322-.059.658-.284.88L3 10.5"/></svg>',
+	palette: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>',
+	globe: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+	users: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+	clock: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+	dollar: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
+	lock: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>',
+	refresh: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>',
+	code: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
+	key: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L15 8"/></svg>',
+	box: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>',
+	bag: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>',
+	zap: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+	shield: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+	server: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>',
+	terminal: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>',
+	heart: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+	layout: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>',
+	sliders: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>',
+	store: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5M4 9v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9M9 21v-6h6v6"/></svg>',
+	rocket: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.16 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.16-1.62 0-5 0-5"/></svg>',
+	waves: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>',
+	anchor: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="22" x2="12" y2="8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>',
+	network: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><line x1="12" y1="8" x2="12" y2="14"/><line x1="12" y1="14" x2="7" y2="17"/><line x1="12" y1="14" x2="17" y2="17"/></svg>',
 	github: '<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>',
 	close: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
 	pen: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
 	arrowRight: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>',
+	externalLink: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>',
 };
 
-const navFeatures = isID ? 'Fitur' : 'Features';
+// ── Nav ──
+const navProducts = isID ? 'Produk' : 'Products';
 const navDocs = isID ? 'Dokumen' : 'Docs';
 const btnGetStarted = isID ? 'Mulai' : 'Get Started';
 
+// ── Hero ──
 const heroLabel = isID ? 'Free & Open Source' : 'Free & Open Source';
 const heroH1a = isID ? 'Open Software untuk' : 'Open Software for';
 const heroH1b = isID ? 'Commerce Merdeka' : 'Independent Commerce';
@@ -55,47 +58,78 @@ const heroSub = isID
 const heroCTA1 = isID ? 'Mulai' : 'Get Started';
 const heroCTA2 = isID ? 'Lihat di GitHub' : 'View on GitHub';
 
-const flowNodes = [
-	{ icon: ic.lock, label: isID ? 'SaaS Lock-in' : 'SaaS Lock-in' },
-	{ icon: ic.unlock, label: isID ? 'Open Source' : 'Open Source', highlight: true },
-	{ icon: ic.palette, label: isID ? 'Brand Anda' : 'Your Brand' },
-	{ icon: ic.users, label: isID ? 'Pelanggan' : 'Customers' },
+// ── Products ──
+const productsLabel = isID ? 'Produk' : 'Products';
+const productsH = isID ? 'Apa yang ada di Fulfex?' : 'What\'s in Fulfex?';
+const productsSub = isID
+	? 'Tiga proyek open-source untuk WordPress dan WooCommerce. Bebas digunakan, dimodifikasi, dan dibagikan.'
+	: 'Three open-source projects for WordPress and WooCommerce. Free to use, modify, and share.';
+const products = [
+	{
+		icon: ic.waves,
+		name: 'Wurrr',
+		tagline: isID ? 'Plugin WordPress open-source' : 'Open-source WordPress plugins',
+		desc: isID
+			? 'Koleksi plugin gratis yang memperluas WordPress tanpa lock-in. Fitur yang biasanya berbayar, sekarang gratis selamanya.'
+			: 'A collection of free plugins that extend WordPress without lock-in. Features that usually cost money, now free forever.',
+		link: 'https://github.com/fulfex',
+		linkLabel: isID ? 'Jelajahi' : 'Explore',
+	},
+	{
+		icon: ic.anchor,
+		name: 'Nautilus',
+		tagline: isID ? 'Theme WordPress berbasis shadcn' : 'shadcn-based WordPress theme',
+		desc: isID
+			? 'Theme yang sangat customizable. Konfigurasi warna, font, dan branding dari satu file — ala shadcn, bukan override CSS.'
+			: 'A deeply customizable theme. Configure colors, fonts, and branding from one file — shadcn-style, not CSS overrides.',
+		link: 'https://github.com/fulfex',
+		linkLabel: isID ? 'Jelajahi' : 'Explore',
+	},
+	{
+		icon: ic.network,
+		name: 'Origix',
+		tagline: isID ? 'Manajemen multi-origin untuk WooCommerce' : 'Multi-origin management for WooCommerce',
+		desc: isID
+			? 'Kelola produk dari multiple origin dan supplier dalam satu interface WooCommerce. Sinkronisasi stok, harga, dan order lintas sumber.'
+			: 'Manage products from multiple origins and suppliers in one WooCommerce interface. Sync stock, pricing, and orders across sources.',
+		link: 'https://github.com/fulfex',
+		linkLabel: isID ? 'Jelajahi' : 'Explore',
+	},
 ];
 
-const problemLabel = isID ? 'Masalah' : 'The Problem';
-const problemH = isID ? 'Anda tidak punya software. Anda menyewanya.' : 'You don\u2019t own your software. You rent it.';
-const problemItems = [
-	{ icon: ic.dollar, text: isID ? 'Biaya beruntun yang tumbuh setiap tahun. Berhenti bayar, berhenti beroperasi.' : 'Recurring fees that grow every year. Stop paying, stop operating.' },
-	{ icon: ic.lock, text: isID ? 'Data pelanggan, kode, dan branding tertinggal di platform vendor.' : 'Customer data, code, and branding locked inside a vendor platform.' },
-	{ icon: ic.refresh, text: isID ? 'Customisasi terbatas. Anda menyesuaikan diri dengan template mereka.' : 'Customization is limited. You adapt to their template, not yours.' },
-	{ icon: ic.clock, text: isID ? 'Harga berubah, fitur dihapus, API diubah — tanpa persetujuan Anda.' : 'Prices change, features removed, APIs broken — without your consent.' },
+// ── Built On ──
+const builtOnLabel = isID ? 'Berfondasi pada' : 'Built on a foundation of';
+const builtOnH = isID ? 'Tooling yang sudah Anda kenal dan percaya.' : 'Tooling you already know and trust.';
+const builtOn = [
+	{
+		name: 'WordPress',
+		desc: isID ? 'CMS open-source yang menjalankan 43% web. Fondasi yang stabil dan teruji.' : 'The open-source CMS powering 43% of the web. A stable, proven foundation.',
+	},
+	{
+		name: 'WooCommerce',
+		desc: isID ? 'Platform ecommerce open-source terbesar di dunia. Fleksibel dan extensible.' : 'The world\'s largest open-source ecommerce platform. Flexible and extensible.',
+	},
+	{
+		name: 'shadcn',
+		desc: isID ? 'Sistem komponen yang developer cintai. Config-driven, bukan black box.' : 'The component system developers love. Config-driven, not a black box.',
+	},
 ];
 
-const solutionLabel = isID ? 'Solusi' : 'The Solution';
-const solutionH = isID ? 'Software milik Anda. Selamanya.' : 'Software you own. Forever.';
-const solutionSub = isID
-	? 'Fulfex memberi Anda kebebasan untuk memiliki, memodifikasi, dan mengembangkan software commerce Anda — tanpa izin siapa pun.'
-	: 'Fulfex gives you the freedom to own, modify, and grow your commerce software — without anyone\u2019s permission.';
-const solutionFlow = [
-	{ icon: ic.box, label: isID ? 'Open Source' : 'Open Source', highlight: true },
-	{ icon: ic.key, label: isID ? 'Milik Anda' : 'Yours' },
-	{ icon: ic.palette, label: isID ? 'Brand Anda' : 'Your Brand' },
-	{ icon: ic.store, label: isID ? 'Bisnis Tumbuh' : 'Business Grows' },
-];
-
-const featuresLabel = isID ? 'Fitur' : 'What You Get';
+// ── Features ──
+const featuresLabel = isID ? 'Mengapa Fulfex' : 'Why Fulfex';
 const featuresH = isID ? 'Semua yang dibutuhkan untuk tumbuh. Tanpa yang menghentikan Anda.' : 'Everything you need to grow. Nothing that holds you back.';
 const features = [
 	{ icon: ic.key, title: isID ? 'Kepemilikan Penuh' : 'Full Ownership', desc: isID ? 'Kode, data, dan branding milik Anda. Selamanya.' : 'Code, data, and branding are yours. Forever.' },
 	{ icon: ic.dollar, title: isID ? 'Tanpa Biaya Beruntun' : 'No Recurring Fees', desc: isID ? 'Bayar sekali untuk hosting. Software gratis selamanya.' : 'Pay once for hosting. Software is free forever.' },
 	{ icon: ic.palette, title: isID ? 'Brand Sepenuhnya' : 'Full Branding Control', desc: isID ? 'Warna, font, layout — semua sesuai brand Anda.' : 'Colors, fonts, layout — everything matches your brand.' },
 	{ icon: ic.globe, title: isID ? 'Deploy di Mana Pun' : 'Deploy Anywhere', desc: isID ? 'Hosting Anda, aturan Anda. Tanpa vendor wajib.' : 'Your hosting, your rules. No vendor required.' },
-	{ icon: ic.zap, title: isID ? 'Cepat & Ringan' : 'Fast & Lightweight', desc: isID ? 'Performa yang pelanggan harapkan, bukan yang dikenakan.' : 'Performance customers expect, not what\u2019s imposed on them.' },
+	{ icon: ic.zap, title: isID ? 'Cepat & Ringan' : 'Fast & Lightweight', desc: isID ? 'Performa yang pelanggan harapkan, bukan yang dikenakan.' : 'Performance customers expect, not what\'s imposed on them.' },
 	{ icon: ic.bag, title: isID ? 'Checkout Lancar' : 'Smooth Checkout', desc: isID ? 'Alur belanja yang fokus konversi, bukan kompromi.' : 'Shopping flow built for conversion, not compromise.' },
-	{ icon: ic.shield, title: isID ? 'Data Aman' : 'Your Data, Safe', desc: isID ? 'Data pelanggan di server Anda. Bukan di pihak ketiga.' : 'Customer data on your servers. Not a third party\u2019s.' },
+	{ icon: ic.shield, title: isID ? 'Data Aman' : 'Your Data, Safe', desc: isID ? 'Data pelanggan di server Anda. Bukan di pihak ketiga.' : 'Customer data on your servers. Not a third party\'s.' },
 	{ icon: ic.unlock, title: isID ? 'Tanpa Lock-in' : 'No Lock-in', desc: isID ? 'Fork, ubah, pindah. Bebas pergi kapan saja.' : 'Fork, modify, migrate. Free to leave anytime.' },
 ];
 
+// ── Developer Experience ──
 const devLabel = isID ? 'Untuk Developer' : 'For Developers';
 const devH = isID ? 'Tooling modern. Bukan PHP warisan.' : 'Modern tooling. Not legacy PHP.';
 const devSub = isID
@@ -106,6 +140,7 @@ const codeExample = isID
 	? '<span class="c-comment">/* theme.css — sama seperti shadcn */</span>\n<span class="c-sel">:root</span> {\n  <span class="c-prop">--background</span>: <span class="c-num">0 0% 4%</span>;\n  <span class="c-prop">--foreground</span>: <span class="c-num">0 0% 98%</span>;\n  <span class="c-prop">--primary</span>: <span class="c-num">239 84% 67%</span>;\n  <span class="c-prop">--radius</span>: <span class="c-num">0.75rem</span>;\n  <span class="c-prop">--font-sans</span>: <span class="c-str">"Inter"</span>;\n}'
 	: '<span class="c-comment">/* theme.css — just like shadcn */</span>\n<span class="c-sel">:root</span> {\n  <span class="c-prop">--background</span>: <span class="c-num">0 0% 4%</span>;\n  <span class="c-prop">--foreground</span>: <span class="c-num">0 0% 98%</span>;\n  <span class="c-prop">--primary</span>: <span class="c-num">239 84% 67%</span>;\n  <span class="c-prop">--radius</span>: <span class="c-num">0.75rem</span>;\n  <span class="c-prop">--font-sans</span>: <span class="c-str">"Inter"</span>;\n}';
 
+// ── Principles ──
 const principlesLabel = isID ? 'Prinsip' : 'Principles';
 const principlesH = isID ? 'Empat kebebasan yang kami jaga.' : 'Four freedoms we protect.';
 const principles = [
@@ -115,29 +150,55 @@ const principles = [
 	{ icon: ic.heart, title: isID ? 'Kebebasan 3' : 'Freedom 3', desc: isID ? 'Bagikan versi yang sudah Anda modifikasi.' : 'Share your modified versions with the community.' },
 ];
 
-const ossLabel = isID ? 'Open Source' : 'Open Source';
-const ossH = isID ? 'Bukan SaaS yang disewakan. Software milik Anda.' : 'Not a SaaS you rent. Software you own.';
-const ossValues = [
-	{ icon: ic.server, title: isID ? 'Self-Hostable' : 'Self-Hostable', desc: isID ? 'Deploy di mana pun. Hosting Anda, aturan Anda.' : 'Deploy anywhere. Your hosting, your rules.' },
-	{ icon: ic.box, title: isID ? 'Extensible' : 'Extensible', desc: isID ? 'Tambah atau ubah komponen. Kode ada di repo Anda.' : 'Add or modify components. Code lives in your repo.' },
-	{ icon: ic.palette, title: isID ? 'Configurable' : 'Configurable', desc: isID ? 'Config untuk warna, font, dan branding.' : 'Config for colors, fonts, and branding.' },
-	{ icon: ic.unlock, title: isID ? 'Tanpa Lock-in' : 'No Vendor Lock-in', desc: isID ? 'Fork, ubah, host sendiri. Bebas pergi kapan pun.' : 'Fork, modify, self-host. Free to leave anytime.' },
-	{ icon: ic.key, title: isID ? 'Milik Anda' : 'Yours to Keep', desc: isID ? 'Software Anda, data Anda, bisnis Anda.' : 'Your software, your data, your business.' },
-	{ icon: ic.terminal, title: isID ? 'Developer-First' : 'Developer-First', desc: isID ? 'TypeScript, komponen bertipe, tooling modern.' : 'TypeScript, typed components, modern tooling.' },
-];
-
+// ── Mission ──
 const missionH = isID
 	? 'Misi kami: memberi setiap developer dan penjual kebebasan untuk memiliki software yang menumbuhkan bisnis mereka.'
 	: 'Our mission: giving every developer and seller the freedom to own the software that grows their business.';
 const missionLink = isID ? 'Pelajari lebih lanjut' : 'Learn more';
 
+// ── Modal ──
 const modalTitle = isID ? 'Mulai Perjalanan Anda' : 'Start Your Journey';
 const modalDesc = isID
 	? 'Hubungi saya di <a href="mailto:me@yan.ad" class="modal-email">me@yan.ad</a> — Saya pengembang tunggal, jadi proyek ini mungkin butuh waktu untuk rilis ke publik.'
-	: 'Reach me at <a href="mailto:me@yan.ad" class="modal-email">me@yan.ad</a> — I\u2019m a solo developer, so this project may take some effort to launch publicly.';
+	: 'Reach me at <a href="mailto:me@yan.ad" class="modal-email">me@yan.ad</a> — I\'m a solo developer, so this project may take some effort to launch publicly.';
 
+// ── Footer ──
 const footerTag = isID ? 'Open software untuk commerce merdeka' : 'Open software for independent commerce';
 const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo developer';
+const footerCols = [
+	{
+		title: isID ? 'Produk' : 'Products',
+		links: [
+			{ label: 'Wurrr', href: 'https://github.com/fulfex' },
+			{ label: 'Nautilus', href: 'https://github.com/fulfex' },
+			{ label: 'Origix', href: 'https://github.com/fulfex' },
+		],
+	},
+	{
+		title: isID ? 'Sumber' : 'Resources',
+		links: [
+			{ label: isID ? 'Dokumen' : 'Docs', href: 'https://github.com/fulfex' },
+			{ label: isID ? 'Blog' : 'Blog', href: 'https://github.com/fulfex' },
+			{ label: 'GitHub', href: 'https://github.com/fulfex' },
+		],
+	},
+	{
+		title: isID ? 'Komunitas' : 'Community',
+		links: [
+			{ label: 'GitHub', href: 'https://github.com/fulfex' },
+			{ label: isID ? 'Email' : 'Email', href: 'mailto:me@yan.ad' },
+			{ label: isID ? 'Berbagi Proyek' : 'Share a Project', href: 'mailto:me@yan.ad' },
+		],
+	},
+	{
+		title: isID ? 'Tentang' : 'About',
+		links: [
+			{ label: isID ? 'Misi Kami' : 'Our Mission', href: '#mission' },
+			{ label: isID ? 'Prinsip' : 'Principles', href: '#' },
+			{ label: isID ? 'Berbagi' : 'Contribute', href: 'https://github.com/fulfex' },
+		],
+	},
+];
 ---
 
 <header>
@@ -147,14 +208,15 @@ const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo de
 			<span>Fulfex</span>
 		</a>
 		<nav>
-			<a href="#features">{navFeatures}</a>
-			<a href="https://github.com/fulfex/fulfex" target="_blank">{navDocs}</a>
+			<a href="#products">{navProducts}</a>
+			<a href="https://github.com/fulfex" target="_blank">{navDocs}</a>
 			<a href={otherPath} class="lang-toggle" set:html={langFlag + langLabel}></a>
 			<button class="btn btn-primary btn-sm open-modal">{btnGetStarted}</button>
 		</nav>
 	</div>
 </header>
 
+<!-- ════════ Hero ════════ -->
 <section class="hero">
 	<div class="container hero-inner">
 		<div class="hero-text">
@@ -163,61 +225,72 @@ const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo de
 			<p class="hero-sub">{heroSub}</p>
 			<div class="hero-actions">
 				<button class="btn btn-primary open-modal">{heroCTA1}</button>
-				<a href="https://github.com/fulfex/fulfex" class="btn btn-ghost" target="_blank">
+				<a href="https://github.com/fulfex" class="btn btn-ghost" target="_blank">
 					<span set:html={ic.github}></span>
 					{heroCTA2}
 				</a>
 			</div>
 		</div>
-		<div class="hero-flow" aria-hidden="true">
-			{flowNodes.map((node, i) => (
-				<>
-					<div class={`flow-node${node.highlight ? ' highlight' : ''}`}>
-						<span class="flow-icon" set:html={node.icon}></span>
-						<span class="flow-label">{node.label}</span>
-					</div>
-					{i < flowNodes.length - 1 && <div class="flow-line"></div>}
-				</>
-			))}
+		<div class="hero-code" aria-hidden="true">
+			<div class="code-window">
+				<div class="code-header">
+					<span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span>
+					<span class="code-filename">terminal</span>
+				</div>
+				<pre class="code-body"><span class="c-prompt">$</span> <span class="c-cmd">git clone fulfex/wurrr</span>
+<span class="c-prompt">$</span> <span class="c-cmd">git clone fulfex/nautilus</span>
+<span class="c-prompt">$</span> <span class="c-cmd">git clone fulfex/origix</span>
+<span class="c-comment"># Free. Open source. Yours.</span></pre>
+			</div>
 		</div>
 	</div>
 	<div class="hero-glow" aria-hidden="true"></div>
 </section>
 
-<section class="problem reveal">
+<!-- ════════ Products ════════ -->
+<section id="products" class="products reveal">
 	<div class="container">
-		<span class="section-label">{problemLabel}</span>
-		<h2>{problemH}</h2>
-		<div class="problem-grid">
-			{problemItems.map((item) => (
-				<div class="problem-card">
-					<span class="problem-icon" set:html={item.icon}></span>
-					<p>{item.text}</p>
+		<span class="section-label">{productsLabel}</span>
+		<h2>{productsH}</h2>
+		<p class="section-sub">{productsSub}</p>
+		<div class="products-grid">
+			{products.map((p) => (
+				<a href={p.link} class="product-card" target="_blank">
+					<div class="product-head">
+						<span class="product-icon" set:html={p.icon}></span>
+						<div>
+							<h3>{p.name}</h3>
+							<span class="product-tagline">{p.tagline}</span>
+						</div>
+					</div>
+					<p class="product-desc">{p.desc}</p>
+					<span class="product-link">
+						{p.linkLabel}
+						<span set:html={ic.arrowRight}></span>
+					</span>
+				</a>
+			))}
+		</div>
+	</div>
+</section>
+
+<!-- ════════ Built On ════════ -->
+<section class="built-on reveal">
+	<div class="container">
+		<span class="section-label">{builtOnLabel}</span>
+		<h2>{builtOnH}</h2>
+		<div class="built-on-grid">
+			{builtOn.map((b) => (
+				<div class="built-on-card">
+					<h3>{b.name}</h3>
+					<p>{b.desc}</p>
 				</div>
 			))}
 		</div>
 	</div>
 </section>
 
-<section class="solution reveal">
-	<div class="container">
-		<span class="section-label">{solutionLabel}</span>
-		<h2>{solutionH}</h2>
-		<p class="solution-sub">{solutionSub}</p>
-		<div class="solution-flow" aria-hidden="true">
-			{solutionFlow.map((node, i) => (
-				<>
-					<div class={`sol-node${node.highlight ? ' highlight' : ''}`}>
-						<span class="sol-node-icon" set:html={node.icon}></span>
-						<span class="sol-node-label">{node.label}</span>
-					</div>
-					{i < solutionFlow.length - 1 && <div class="sol-arrow"></div>}
-				</>
-			))}
-		</div>
-	</div>
-</section>
-
+<!-- ════════ Features ════════ -->
 <section id="features" class="features reveal">
 	<div class="container">
 		<span class="section-label">{featuresLabel}</span>
@@ -234,6 +307,7 @@ const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo de
 	</div>
 </section>
 
+<!-- ════════ Developer Experience ════════ -->
 <section class="devex reveal">
 	<div class="container devex-inner">
 		<div class="devex-text">
@@ -256,6 +330,7 @@ const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo de
 	</div>
 </section>
 
+<!-- ════════ Principles ════════ -->
 <section class="principles reveal">
 	<div class="container">
 		<span class="section-label">{principlesLabel}</span>
@@ -272,32 +347,18 @@ const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo de
 	</div>
 </section>
 
-<section class="oss reveal">
-	<div class="container">
-		<span class="section-label">{ossLabel}</span>
-		<h2>{ossH}</h2>
-		<div class="oss-grid">
-			{ossValues.map((v) => (
-				<div class="oss-card">
-					<span class="oss-icon" set:html={v.icon}></span>
-					<h3>{v.title}</h3>
-					<p>{v.desc}</p>
-				</div>
-			))}
-		</div>
-	</div>
-</section>
-
-<section class="mission reveal">
+<!-- ════════ Mission ════════ -->
+<section id="mission" class="mission reveal">
 	<div class="container mission-inner">
 		<h2>{missionH}</h2>
-		<a href="https://github.com/fulfex/fulfex" class="mission-link" target="_blank">
+		<a href="https://github.com/fulfex" class="mission-link" target="_blank">
 			{missionLink}
 			<span set:html={ic.arrowRight}></span>
 		</a>
 	</div>
 </section>
 
+<!-- ════════ Modal ════════ -->
 <div id="modal" class="modal-overlay">
 	<div class="modal">
 		<button class="modal-close" id="modal-close" set:html={ic.close}></button>
@@ -308,37 +369,34 @@ const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo de
 	</div>
 </div>
 
+<!-- ════════ Footer ════════ -->
 <footer>
-	<div class="container footer-inner">
+	<div class="container footer-top">
 		<div class="footer-brand">
 			<div class="logo">
-				<img src={fulFexLogo.src} alt="Fulfex" width="16" height="16" />
+				<img src={fulFexLogo.src} alt="Fulfex" width="20" height="20" />
 				<span>Fulfex</span>
 			</div>
-			<p>{footerTag}</p>
+			<p class="footer-tag">{footerTag}</p>
 			<p class="footer-by">{footerBy}</p>
+			<div class="footer-social">
+				<a href="https://github.com/fulfex" target="_blank" aria-label="GitHub" set:html={ic.github}></a>
+			</div>
 		</div>
-		<div class="footer-links">
-			<div class="footer-col">
-				<h4>{isID ? 'Produk' : 'Product'}</h4>
-				<a href="#features">{navFeatures}</a>
-				<a href="https://github.com/fulfex/fulfex" target="_blank">{navDocs}</a>
-			</div>
-			<div class="footer-col">
-				<h4>{isID ? 'Sumber' : 'Resources'}</h4>
-				<a href="https://github.com/fulfex/fulfex" target="_blank">GitHub</a>
-				<a href={isID ? '/' : '/id/'}>{isID ? 'English' : 'Bahasa Indonesia'}</a>
-			</div>
-			<div class="footer-col">
-				<h4>{isID ? 'Sosial' : 'Social'}</h4>
-				<a href="https://github.com/fulfex" target="_blank">GitHub</a>
-				<a href="mailto:me@yan.ad">Email</a>
-			</div>
+		<div class="footer-cols">
+			{footerCols.map((col) => (
+				<div class="footer-col">
+					<h4>{col.title}</h4>
+					{col.links.map((link) => (
+						<a href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined}>{link.label}</a>
+					))}
+				</div>
+			))}
 		</div>
 	</div>
 	<div class="container footer-bottom">
-		<p class="footer-copy">&copy; 2026 Fulfex. {isID ? 'Hak cipta dilindungi.' : 'All Rights Reserved.'}</p>
-		<p class="footer-trademark">{isID ? 'Free and Open Source Software. Bebas digunakan, dimodifikasi, dan dibagikan.' : 'Free and Open Source Software. Free to use, modify, and share.'}</p>
+		<p>&copy; 2026 Fulfex. {isID ? 'Hak cipta dilindungi.' : 'All Rights Reserved.'}</p>
+		<p class="footer-oss">{isID ? 'Free and Open Source Software. Bebas digunakan, dimodifikasi, dan dibagikan.' : 'Free and Open Source Software. Free to use, modify, and share.'}</p>
 	</div>
 </footer>
 
@@ -387,6 +445,7 @@ const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo de
 		text-transform: uppercase; color: #666; margin-bottom: 16px;
 		font-family: 'Geist Mono', monospace;
 	}
+	.section-sub { font-size: 1rem; color: #888; line-height: 1.5; max-width: 520px; margin: 0 0 48px; }
 	.gradient {
 		background: linear-gradient(180deg, #fff 0%, #888 100%);
 		-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
@@ -433,83 +492,16 @@ const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo de
 		font-size: 12px; font-weight: 400; margin-bottom: 24px;
 		font-family: 'Geist Mono', monospace;
 	}
-	.hero h1 {
-		font-size: 3.8rem; font-weight: 600; letter-spacing: -0.05em; line-height: 1.05; margin: 0 0 24px;
-		color: #fff;
-	}
+	.hero h1 { font-size: 3.8rem; font-weight: 600; letter-spacing: -0.05em; line-height: 1.05; margin: 0 0 24px; color: #fff; }
 	.hero-sub { font-size: 1.15rem; color: #888; line-height: 1.5; margin: 0 0 36px; font-weight: 400; }
 	.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+	.hero-code { flex: 1; }
+	.hero-code .code-window { max-width: 420px; margin-left: auto; }
+	.hero-code .code-body { font-size: 13px; line-height: 2; }
 
-	.hero-flow { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0; }
-	.flow-node {
-		display: flex; align-items: center; gap: 8px; padding: 10px 16px;
-		border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);
-		background: rgba(255,255,255,0.02); font-size: 13px; font-weight: 500; color: #888;
-		transition: all 0.2s; white-space: nowrap;
-	}
-	.flow-node.highlight {
-		border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff;
-	}
-	.flow-icon { display: flex; color: #555; }
-	.flow-node.highlight .flow-icon { color: #fff; }
-	.flow-label { font-size: 12px; }
-	.flow-line { width: 1px; height: 16px; background: rgba(255,255,255,0.1); }
-
-	/* ── Problem ── */
-	.problem { padding: 100px 0; }
-	.problem h2 { max-width: 560px; }
-	.problem-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 40px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; }
-	.problem-card {
-		display: flex; align-items: flex-start; gap: 14px; padding: 24px;
-		background: #000; transition: background 0.15s;
-	}
-	.problem-card:hover { background: rgba(255,255,255,0.02); }
-	.problem-icon { display: flex; color: #444; flex-shrink: 0; padding-top: 2px; }
-	.problem-card p { margin: 0; font-size: 0.875rem; color: #888; line-height: 1.5; }
-
-	/* ── Solution ── */
-	.solution { padding: 80px 0; }
-	.solution h2 { max-width: 520px; }
-	.solution-sub { font-size: 1rem; color: #888; line-height: 1.5; max-width: 520px; margin: 0 0 48px; }
-	.solution-flow { display: flex; align-items: center; gap: 0; flex-wrap: wrap; justify-content: center; }
-	.sol-node {
-		display: flex; flex-direction: column; align-items: center; gap: 10px;
-		padding: 20px 24px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);
-		background: rgba(255,255,255,0.02); min-width: 140px; text-align: center;
-	}
-	.sol-node.highlight { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.04); }
-	.sol-node-icon { display: flex; color: #444; }
-	.sol-node.highlight .sol-node-icon { color: #fff; }
-	.sol-node-label { font-size: 13px; font-weight: 500; color: #888; }
-	.sol-node.highlight .sol-node-label { color: #fff; }
-	.sol-arrow { width: 32px; height: 1px; background: rgba(255,255,255,0.1); }
-
-	/* ── Features ── */
-	.features { padding: 80px 0; }
-	.features h2 { max-width: 520px; }
-	.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 40px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; }
-	.feature-card {
-		padding: 24px; background: #000; transition: background 0.15s;
-	}
-	.feature-card:hover { background: rgba(255,255,255,0.02); }
-	.feature-icon { display: flex; color: #fff; margin-bottom: 14px; }
-	.feature-card h3 { font-size: 0.9rem; font-weight: 500; margin: 0 0 6px; color: #fff; letter-spacing: -0.01em; }
-	.feature-card p { font-size: 0.8rem; color: #666; line-height: 1.5; margin: 0; }
-
-	/* ── Developer Experience ── */
-	.devex { padding: 80px 0; }
-	.devex-inner { display: flex; align-items: center; gap: 60px; }
-	.devex-text { flex: 0 0 420px; }
-	.devex h2 { max-width: 100%; }
-	.devex-sub { font-size: 1rem; color: #888; line-height: 1.5; margin: 0 0 28px; }
-	.comp-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-	.comp-chip {
-		padding: 5px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);
-		background: rgba(255,255,255,0.03); font-family: 'Geist Mono', monospace;
-		font-size: 12px; color: #888;
-	}
+	/* ── Code Window (shared) ── */
 	.code-window {
-		flex: 1; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);
+		border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);
 		background: #0a0a0a; overflow: hidden;
 	}
 	.code-header {
@@ -530,26 +522,66 @@ const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo de
 	.c-prop { color: #818cf8; }
 	.c-num { color: #f59e0b; }
 	.c-str { color: #34d399; }
+	.c-prompt { color: #444; }
+	.c-cmd { color: #fff; }
+
+	/* ── Products ── */
+	.products { padding: 100px 0; }
+	.products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+	.product-card {
+		display: flex; flex-direction: column; gap: 16px;
+		padding: 28px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);
+		background: rgba(255,255,255,0.02); text-decoration: none; transition: all 0.2s;
+	}
+	.product-card:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.04); }
+	.product-head { display: flex; align-items: flex-start; gap: 14px; }
+	.product-icon { display: flex; color: #fff; flex-shrink: 0; padding-top: 2px; }
+	.product-card h3 { font-size: 1.2rem; font-weight: 600; margin: 0 0 4px; color: #fff; letter-spacing: -0.02em; }
+	.product-tagline { font-size: 0.78rem; color: #666; font-family: 'Geist Mono', monospace; }
+	.product-desc { font-size: 0.875rem; color: #888; line-height: 1.6; margin: 0; flex: 1; }
+	.product-link {
+		display: inline-flex; align-items: center; gap: 6px;
+		color: #fff; font-size: 13px; font-weight: 500;
+	}
+
+	/* ── Built On ── */
+	.built-on { padding: 80px 0; border-top: 1px solid rgba(255,255,255,0.08); }
+	.built-on-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 40px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; }
+	.built-on-card { padding: 28px; background: #000; }
+	.built-on-card h3 { font-size: 1rem; font-weight: 600; margin: 0 0 10px; color: #fff; letter-spacing: -0.02em; }
+	.built-on-card p { font-size: 0.85rem; color: #666; line-height: 1.6; margin: 0; }
+
+	/* ── Features ── */
+	.features { padding: 80px 0; }
+	.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 40px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; }
+	.feature-card { padding: 24px; background: #000; transition: background 0.15s; }
+	.feature-card:hover { background: rgba(255,255,255,0.02); }
+	.feature-icon { display: flex; color: #fff; margin-bottom: 14px; }
+	.feature-card h3 { font-size: 0.9rem; font-weight: 500; margin: 0 0 6px; color: #fff; letter-spacing: -0.01em; }
+	.feature-card p { font-size: 0.8rem; color: #666; line-height: 1.5; margin: 0; }
+
+	/* ── Developer Experience ── */
+	.devex { padding: 80px 0; }
+	.devex-inner { display: flex; align-items: center; gap: 60px; }
+	.devex-text { flex: 0 0 420px; }
+	.devex h2 { max-width: 100%; }
+	.devex-sub { font-size: 1rem; color: #888; line-height: 1.5; margin: 0 0 28px; }
+	.comp-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+	.comp-chip {
+		padding: 5px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);
+		background: rgba(255,255,255,0.03); font-family: 'Geist Mono', monospace;
+		font-size: 12px; color: #888;
+	}
+	.devex .code-window { flex: 1; }
 
 	/* ── Principles ── */
 	.principles { padding: 80px 0; }
-	.principles h2 { max-width: 520px; }
 	.principles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 40px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; }
 	.principle-card { padding: 28px 24px; background: #000; transition: background 0.15s; }
 	.principle-card:hover { background: rgba(255,255,255,0.02); }
 	.principle-icon { display: flex; color: #fff; margin-bottom: 16px; }
 	.principle-card h3 { font-size: 0.85rem; font-weight: 500; margin: 0 0 8px; color: #fff; font-family: 'Geist Mono', monospace; letter-spacing: 0.02em; }
 	.principle-card p { font-size: 0.82rem; color: #666; line-height: 1.5; margin: 0; }
-
-	/* ── Open Source ── */
-	.oss { padding: 80px 0; }
-	.oss h2 { max-width: 480px; }
-	.oss-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 40px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; }
-	.oss-card { padding: 24px; background: #000; transition: background 0.15s; }
-	.oss-card:hover { background: rgba(255,255,255,0.02); }
-	.oss-icon { display: flex; color: #fff; margin-bottom: 12px; }
-	.oss-card h3 { font-size: 0.9rem; font-weight: 500; margin: 0 0 6px; color: #fff; letter-spacing: -0.01em; }
-	.oss-card p { font-size: 0.82rem; color: #666; line-height: 1.5; margin: 0; }
 
 	/* ── Mission ── */
 	.mission { padding: 120px 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); }
@@ -591,45 +623,47 @@ const footerBy = isID ? 'Dibangun oleh pengembang tunggal' : 'Built by a solo de
 	.modal-cta { display: block; width: 100%; text-align: center; }
 
 	/* ── Footer ── */
-	footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 48px 0 24px; }
-	.footer-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; }
-	.footer-brand .logo { font-size: 0.9rem; }
-	.footer-brand .logo img { width: 16px; height: 16px; }
-	.footer-brand p { color: #555; font-size: 0.8rem; margin: 6px 0 0; }
-	.footer-by { font-size: 0.75rem !important; color: #333 !important; }
-	.footer-links { display: flex; gap: 48px; }
-	.footer-col h4 { font-size: 0.75rem; font-weight: 500; color: #555; margin: 0 0 12px; text-transform: uppercase; letter-spacing: 0.04em; font-family: 'Geist Mono', monospace; }
-	.footer-col a { display: block; color: #888; font-size: 0.85rem; text-decoration: none; padding: 4px 0; transition: color 0.15s; }
+	footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 56px 0 24px; }
+	.footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 60px; }
+	.footer-brand .logo { font-size: 0.95rem; }
+	.footer-brand .logo img { width: 20px; height: 20px; }
+	.footer-tag { color: #666; font-size: 0.85rem; margin: 12px 0 4px; line-height: 1.5; max-width: 280px; }
+	.footer-by { color: #444; font-size: 0.78rem; margin: 0; }
+	.footer-social { display: flex; gap: 12px; margin-top: 20px; }
+	.footer-social a { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); color: #888; text-decoration: none; transition: all 0.15s; }
+	.footer-social a:hover { border-color: rgba(255,255,255,0.3); color: #fff; }
+	.footer-cols { display: flex; gap: 48px; }
+	.footer-col h4 { font-size: 0.75rem; font-weight: 600; color: #555; margin: 0 0 16px; text-transform: uppercase; letter-spacing: 0.04em; font-family: 'Geist Mono', monospace; }
+	.footer-col a { display: block; color: #888; font-size: 0.85rem; text-decoration: none; padding: 5px 0; transition: color 0.15s; }
 	.footer-col a:hover { color: #fff; }
-	.footer-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); }
-	.footer-copy { color: #555; font-size: 0.78rem; margin: 0; }
-	.footer-trademark { font-size: 0.72rem; color: #333; margin: 0; }
+	.footer-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+	.footer-bottom p { color: #555; font-size: 0.78rem; margin: 0; }
+	.footer-oss { font-size: 0.72rem; color: #333; }
 
 	/* ── Responsive ── */
 	@media (max-width: 960px) {
 		.hero-inner { flex-direction: column; gap: 48px; }
 		.hero-text { flex: none; max-width: 100%; }
 		.hero h1 { font-size: 2.8rem; }
+		.hero-code { width: 100%; }
+		.hero-code .code-window { max-width: 100%; margin: 0; }
+		.products-grid { grid-template-columns: 1fr; }
+		.built-on-grid { grid-template-columns: 1fr; }
 		.feature-grid { grid-template-columns: repeat(2, 1fr); }
 		.principles-grid { grid-template-columns: repeat(2, 1fr); }
 		.devex-inner { flex-direction: column; gap: 40px; }
 		.devex-text { flex: none; width: 100%; }
-		.footer-inner { flex-direction: column; }
-		.footer-links { gap: 32px; }
+		.footer-top { flex-direction: column; gap: 40px; }
+		.footer-cols { flex-wrap: wrap; gap: 32px; }
 	}
 	@media (max-width: 640px) {
 		.hero h1 { font-size: 2.2rem; }
 		.hero-sub { font-size: 1rem; }
 		h2 { font-size: 1.7rem; }
-		.problem-grid { grid-template-columns: 1fr; }
 		.feature-grid { grid-template-columns: 1fr; }
-		.oss-grid { grid-template-columns: 1fr; }
 		.principles-grid { grid-template-columns: 1fr; }
 		.footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
-		.footer-links { flex-wrap: wrap; gap: 24px; }
-		.solution-flow { flex-direction: column; }
-		.sol-arrow { width: 1px; height: 20px; }
-		.hero-flow { display: none; }
+		.footer-cols { gap: 24px; }
 		nav a:not(.lang-toggle) { display: none; }
 	}
 

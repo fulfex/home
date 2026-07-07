@@ -7,13 +7,25 @@
 
 	<text x="140" y="112" font-family="Geist, system-ui, sans-serif" font-size="22" font-weight="600" fill="white">Fulfex</text>
 
-	<text x="80" y="280" font-family="Geist, system-ui, sans-serif" font-size="56" font-weight="600" fill="white" letter-spacing="-2">Open Software for</text>
-	<text x="80" y="350" font-family="Geist, system-ui, sans-serif" font-size="56" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="-2">Independent Commerce</text>
+	<text x="80" y="250" font-family="Geist, system-ui, sans-serif" font-size="52" font-weight="600" fill="white" letter-spacing="-2">Open Software for</text>
+	<text x="80" y="316" font-family="Geist, system-ui, sans-serif" font-size="52" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="-2">Independent Commerce</text>
 
-	<text x="80" y="420" font-family="Geist, system-ui, sans-serif" font-size="22" font-weight="400" fill="rgba(255,255,255,0.5)">Free and open source. Own your software. Grow without SaaS lock-in.</text>
+	<text x="80" y="380" font-family="Geist, system-ui, sans-serif" font-size="20" font-weight="400" fill="rgba(255,255,255,0.5)">Free and open source. Own your software. Grow without SaaS lock-in.</text>
 
-	<rect x="80" y="500" width="160" height="36" rx="8" fill="white"/>
-	<text x="160" y="524" text-anchor="middle" font-family="Geist, system-ui, sans-serif" font-size="14" font-weight="500" fill="black">Free &amp; Open Source</text>
+	<rect x="80" y="430" width="300" height="80" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+	<text x="100" y="462" font-family="Geist, system-ui, sans-serif" font-size="18" font-weight="600" fill="white">Wurrr</text>
+	<text x="100" y="486" font-family="Geist Mono, monospace" font-size="12" fill="rgba(255,255,255,0.4)">WordPress Plugins</text>
 
-	<text x="1120" y="570" text-anchor="end" font-family="Geist Mono, monospace" font-size="14" fill="rgba(255,255,255,0.3)">fulfex.com</text>
+	<rect x="400" y="430" width="300" height="80" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+	<text x="420" y="462" font-family="Geist, system-ui, sans-serif" font-size="18" font-weight="600" fill="white">Nautilus</text>
+	<text x="420" y="486" font-family="Geist Mono, monospace" font-size="12" fill="rgba(255,255,255,0.4)">shadcn-based Theme</text>
+
+	<rect x="720" y="430" width="300" height="80" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+	<text x="740" y="462" font-family="Geist, system-ui, sans-serif" font-size="18" font-weight="600" fill="white">Origix</text>
+	<text x="740" y="486" font-family="Geist Mono, monospace" font-size="12" fill="rgba(255,255,255,0.4)">Multi-origin for WooCommerce</text>
+
+	<rect x="80" y="560" width="160" height="36" rx="8" fill="white"/>
+	<text x="160" y="584" text-anchor="middle" font-family="Geist, system-ui, sans-serif" font-size="14" font-weight="500" fill="black">Free &amp; Open Source</text>
+
+	<text x="1120" y="584" text-anchor="end" font-family="Geist Mono, monospace" font-size="14" fill="rgba(255,255,255,0.3)">fulfex.com</text>
 </svg>
