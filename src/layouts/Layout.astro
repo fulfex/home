@@ -15,8 +15,8 @@ const title = isID
 	? 'Fulfex — Open Software untuk Commerce Merdeka'
 	: 'Fulfex — Open Software for Independent Commerce';
 const desc = isID
-	? 'FOSS yang membantu developer dan penjual di seluruh dunia memiliki software commerce mereka sendiri. Tumbuh tanpa lock-in SaaS, tanpa biaya beruntun.'
-	: 'Free and open source software that helps developers and sellers worldwide own their commerce software. Grow your business without SaaS lock-in or recurring fees.';
+	? 'FOSS yang membantu developer dan penjual di seluruh dunia memiliki software commerce mereka sendiri. WordPress, Shopify, dan lainnya — tumbuh tanpa lock-in SaaS.'
+	: 'Free and open source software that helps developers and sellers worldwide own their commerce software. WordPress, Shopify, and beyond — grow without SaaS lock-in or recurring fees.';
 const ogLocale = isID ? 'id_ID' : 'en_US';
 const primaryUrl = isID ? idUrl : enUrl;
 const alternateUrl = isID ? enUrl : idUrl;
@@ -35,8 +35,8 @@ const ogImage = new URL('/og-image.svg', site);
 		<meta name="theme-color" content="#000000" />
 		<meta name="application-name" content="Fulfex" />
 		<meta name="keywords" content={isID
-			? 'Fulfex, FOSS, open source, commerce, storefront, WordPress, WooCommerce, theme, shadcn, free software, no SaaS'
-			: 'Fulfex, FOSS, open source, commerce, storefront, WordPress, WooCommerce, theme, shadcn, free software, no SaaS'} />
+			? 'Fulfex, FOSS, open source, commerce, storefront, WordPress, WooCommerce, Shopify, theme, shadcn, free software, no SaaS'
+			: 'Fulfex, FOSS, open source, commerce, storefront, WordPress, WooCommerce, Shopify, theme, shadcn, free software, no SaaS'} />
 
 		<link rel="canonical" href={primaryUrl.toString()} />
 		<link rel="alternate" hreflang={isID ? 'id' : 'en'} href={primaryUrl.toString()} />
@@ -77,7 +77,7 @@ const ogImage = new URL('/og-image.svg', site);
 			name: 'Fulfex',
 			applicationCategory: 'BusinessApplication',
 			operatingSystem: 'Web',
-			description: 'Free and open source software that helps developers and sellers worldwide own their commerce software. Grow without SaaS lock-in.',
+			description: 'Free and open source software that helps developers and sellers worldwide own their commerce software. WordPress, Shopify, and beyond.',
 			url: primaryUrl.toString(),
 			image: ogImage.toString(),
 			offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
